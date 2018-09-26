@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="C:\School\CS450 - Security\cs450-week01\venv"
+$env:VIRTUAL_ENV="C:\School\CS450 - Machine Learning\cs450-assignments\venv"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name

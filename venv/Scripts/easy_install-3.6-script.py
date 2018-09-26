@@ -1,4 +1,4 @@
-#!"C:\School\CS450 - Security\cs450-week01\venv\Scripts\python.exe"
+#!"C:\School\CS450 - Machine Learning\cs450-assignments\venv\Scripts\python.exe"
 # EASY-INSTALL-ENTRY-SCRIPT: 'setuptools==39.1.0','console_scripts','easy_install-3.6'
 __requires__ = 'setuptools==39.1.0'
 import re

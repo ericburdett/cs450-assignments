@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\School\CS450 - Security\cs450-week01\venv"
+set "VIRTUAL_ENV=C:\School\CS450 - Machine Learning\cs450-assignments\venv"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"

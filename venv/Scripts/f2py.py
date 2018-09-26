@@ -1,4 +1,4 @@
-#!C:\School\CS450 - Security\cs450-week01\venv\Scripts\python.exe
+#!C:\School\CS450 - Machine Learning\cs450-assignments\venv\Scripts\python.exe
 # See http://cens.ioc.ee/projects/f2py2e/
 from __future__ import division, print_function
 
