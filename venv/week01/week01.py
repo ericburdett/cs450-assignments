@@ -6,11 +6,13 @@ import HardCoded
 from sklearn import datasets
 from sklearn import model_selection
 from sklearn import naive_bayes
+from sklearn.neighbors import KNeighborsClassifier
 from numpy import genfromtxt
 
 def get_classifier():
     # return HardCoded.HardCodedClassifier()
-    return naive_bayes.GaussianNB()
+    # return naive_bayes.GaussianNB()
+    return KNeighborsClassifier(n_neighbors=3)
 
 def main(argv):
     print("Enter filename for the data file")
