@@ -3,6 +3,7 @@ import pandas
 import numpy
 from sklearn import datasets
 from sklearn import model_selection
+from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from KNearestNeighbors import KNearestNeighbors
 
@@ -16,7 +17,7 @@ def main(argv):
 
     print("Using pre-loaded dataset")
     iris = datasets.load_iris()
-    data = iris.data
+    data = StandardScaler().fit_transform(iris.data) # Standardize, so that we can work with different types of data
     target = iris.target
 
     data_train, data_test, target_train, target_test = model_selection.train_test_split(data, target, test_size=.30, random_state=42)
