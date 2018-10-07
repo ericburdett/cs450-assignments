@@ -64,8 +64,11 @@ def get_autism_data():
 
     ### Strategies for filling missing data ###
 
+    # Experimentation done on this set because it contains the most missing values
+
     # Remove rows with missing data
     # This method gives about 76% accuracy with KNeighborsClassifier
+    # Seems to be the method that gives the best result
     data_frame.dropna(inplace=True)
 
     # Replace missing values with the mean
@@ -102,19 +105,46 @@ def get_autism_data():
     # Transform to numpy arrays
     return input.values, target.values
 
-def test_and_print_accuracy(function, classifier):
-    input, target = function()
-    input_train, input_test, target_train, target_test = model_selection.train_test_split(input, target, test_size=.30, random_state=12)
+def test_and_print(get_data_method, model, scoring_mechanism):
+    input, target = get_data_method()
 
-    print ("Using ", type(classifier).__name__)
-
+    print ("Using ", type(model).__name__)
     k_fold = KFold(n_splits=10, random_state=12)
 
-    result = cross_val_score(classifier, input, target, cv=k_fold, scoring='accuracy')
+    result = cross_val_score(model, input, target, cv=k_fold, scoring=scoring_mechanism)
 
-    print("Accuracy: {:.2f}%".format(result.mean()))
+    if scoring_mechanism == 'accuracy':
+        print("Accuracy: {:.2f}%".format(result.mean()))
+    else:
+        print("Mean Difference: {:.2f} mpg".format(result.mean()))
 
+def main(args):
+    # Ignore warnings so we can easily see the accuracy between the three data sets.
+    # Warnings receiving during cross validation (LinearDiscriminantAnalysis) saying variables are collinear
+    warnings.filterwarnings('ignore')
+
+    print("Car Data")
+    test_and_print(get_car_data, get_classifier(), 'accuracy')
+
+    print("\nAutism Data")
+    # get_autism_data()
+    test_and_print(get_autism_data, get_classifier(), 'accuracy')
+
+    print("\nAuto-MPG Data")
+    test_and_print(get_auto_mpg_data, get_regressor(), 'neg_mean_absolute_error')
+
+
+if __name__ == "__main__":
+    main(sys.argv)
+
+
+
+    ### Old code left here for reference ###
+
+    # OLD WAY - Classification - Without K-Fold Cross Validation
     # model = classifier.fit(input_train, target_train)
+    #
+    # input_train, input_test, target_train, target_test = model_selection.train_test_split(input, target, test_size=.30, random_state=12)
     #
     # prediction = model.predict(input_test)
     # prediction_accuracy = prediction == target_test
@@ -125,41 +155,21 @@ def test_and_print_accuracy(function, classifier):
     # print("Accuracy: ", correct, "/", total, " - ", "{:.2f}".format(correct * 100 / total), "%")
 
 
-def test_and_print_comparison(function, regressor, display_results):
-    input, target = function()
-    input_train, input_test, target_train, target_test = model_selection.train_test_split(input, target, test_size=.30, random_state=12)
-
-    print ("Using ", type(regressor).__name__)
-    model = regressor.fit(input_train, target_train)
-
-    prediction = model.predict(input_test)
-
-    diff_list = []
-
-    for i in range(len(prediction)):
-        diff = prediction[i] - target_test[i]
-        diff_list.append(diff)
-
-        if display_results:
-            print("Predicted: ", "{:.1f}".format(prediction[i]), " Actual: ", target_test[i], " Diff: ", "{:.1f}".format(diff))
-
-    print("Average difference: {:.2f} mpg".format(np.average(diff_list)))
-
-def main(args):
-    # Ignore warnings so we can easily see the accuracy between the three data sets.
-    # Warnings receiving during cross validation (LinearDiscriminantAnalysis) saying variables are collinear
-    warnings.filterwarnings('ignore')
-
-    print("Car Data")
-    test_and_print_accuracy(get_car_data, get_classifier())
-
-    print("\nAutism Data")
-    # get_autism_data()
-    test_and_print_accuracy(get_autism_data, get_classifier())
-
-    print("\nAuto-MPG Data")
-    test_and_print_comparison(get_auto_mpg_data, get_regressor(), False)
-
-
-if __name__ == "__main__":
-    main(sys.argv)
+    # OLD WAY - Without K-Fold Cross Validation
+    # Can display differences between each prediction
+    #
+    # input_train, input_test, target_train, target_test = model_selection.train_test_split(input, target, test_size=.30, random_state=12)
+    # model = regressor.fit(input_train, target_train)
+    # display_results = True
+    # prediction = model.predict(input_test)
+    #
+    # diff_list = []
+    #
+    # for i in range(len(prediction)):
+    #     diff = prediction[i] - target_test[i]
+    #     diff_list.append(diff)
+    #
+    #     if display_results:
+    #         print("Predicted: ", "{:.1f}".format(prediction[i]), " Actual: ", target_test[i], " Diff: ", "{:.1f}".format(diff))
+    #
+    # print("Average difference: {:.2f} mpg".format(np.average(diff_list)))
