@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd8ec37b-e860-4a8d-a7f5-c7bf7ad2cdd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/week04/DecisionTreeClassifier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/week04/house-votes-84.data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/week04/test.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/week04/week04.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/test/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/week04/DecisionTreeClassifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/week04/DecisionTreeClassifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/week04/week04.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/week04/week04.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,43 +17,44 @@
     <session id="-1277855314">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="8" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.5" value="4" />
-          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="arff" value="1" />
           <entry key="csv" value="6" />
-          <entry key="data" value="6" />
-          <entry key="py" value="33" />
+          <entry key="data" value="7" />
+          <entry key="py" value="41" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="20" />
-          <entry key="Python" value="33" />
+          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="Python" value="41" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="arff" value="37" />
-          <entry key="csv" value="666" />
+          <entry key="csv" value="728" />
           <entry key="data" value="834" />
           <entry key="dummy" value="10" />
-          <entry key="py" value="30497" />
+          <entry key="py" value="41388" />
           <entry key="txt" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="1565" />
-          <entry key="Python" value="30497" />
+          <entry key="PLAIN_TEXT" value="1627" />
+          <entry key="Python" value="41388" />
         </counts>
       </usages-collector>
     </session>
@@ -66,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/week03/week03.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="34">
+              <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <marker date="1538872882906" expanded="true" signature="430:435" ph="..." />
@@ -79,56 +77,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/test/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <marker date="1539461408459" expanded="true" signature="104:167" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/week04/week04.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="28" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="309">
+              <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1539492575504" expanded="true" signature="161:1115" ph="..." />
-                <marker date="1539492575504" expanded="true" signature="1130:1411" ph="..." />
+                <marker date="1540077924994" expanded="true" signature="237:1374" ph="..." />
+                <marker date="1540077924994" expanded="true" signature="1203:1374" ph="..." />
+                <marker date="1540077924994" expanded="true" signature="1390:2788" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/lib/arraysetops.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="232" selection-start-line="232" selection-end-line="232" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/lib/function_base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-557">
-              <caret line="4064" column="4" selection-start-line="4064" selection-start-column="4" selection-end-line="4064" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/week04/house-votes-84.data">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="5" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -136,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/week02/week02.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="52">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -145,36 +104,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/venv/week04/DecisionTreeClassifier.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/week01/week01.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+            <state>
+              <caret lean-forward="true" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1539492730758" expanded="true" signature="99:103" ph="..." />
-                <marker date="1539492730758" expanded="true" signature="472:508" ph="..." />
-                <marker date="1539492730758" expanded="true" signature="532:583" ph="..." />
-                <marker date="1539492730758" expanded="true" signature="1316:1829" ph="..." />
-                <marker date="1539492730758" expanded="true" signature="2275:2308" ph="..." />
-                <marker date="1539492730758" expanded="true" signature="2361:3092" ph="..." />
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/week04/test.csv">
+        <entry file="file://$PROJECT_DIR$/venv/week04/house-votes-84.data">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="884">
+              <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/week04/iris.data">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -204,8 +152,8 @@
         <option value="$PROJECT_DIR$/venv/week04/DecisionTree.py" />
         <option value="$PROJECT_DIR$/venv/test/test.py" />
         <option value="$PROJECT_DIR$/venv/week04/test.csv" />
-        <option value="$PROJECT_DIR$/venv/week04/week04.py" />
         <option value="$PROJECT_DIR$/venv/week04/DecisionTreeClassifier.py" />
+        <option value="$PROJECT_DIR$/venv/week04/week04.py" />
       </list>
     </option>
   </component>
@@ -237,6 +185,12 @@
               <item name="cs450-assignments" type="462c0819:PsiDirectoryNode" />
               <item name="venv" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs450-assignments" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs450-assignments" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="week01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cs450-assignments" type="b2602c69:ProjectViewProjectNode" />
@@ -428,7 +382,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32884097" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32884097" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26684636" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,13 +418,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-748">
           <caret line="2372" column="4" selection-start-line="2372" selection-start-column="4" selection-end-line="2372" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/fromnumeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="1036" selection-start-line="1036" selection-end-line="1036" />
         </state>
       </provider>
     </entry>
@@ -542,13 +489,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week01/week01.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/week03/Autism-Adult-Data.data">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11798">
@@ -570,10 +510,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/lib/arraysetops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3910">
+          <caret line="232" selection-start-line="232" selection-end-line="232" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/lib/function_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69088">
+          <caret line="4064" column="4" selection-start-line="4064" selection-start-column="4" selection-end-line="4064" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week04/iris.data">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/core/fromnumeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="1036" selection-start-line="1036" selection-end-line="1036" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week04/test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/test/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1540071153866" expanded="true" signature="206:269" ph="..." />
+            <marker date="1540071153866" expanded="true" signature="284:479" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week02/week02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week01/week01.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week04/house-votes-84.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week04/DecisionTreeClassifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1540075814285" expanded="true" signature="99:103" ph="..." />
+            <marker date="1540075814285" expanded="true" signature="409:445" ph="..." />
+            <marker date="1540075814285" expanded="true" signature="585:1282" ph="..." />
+            <marker date="1540075814285" expanded="true" signature="2949:3077" ph="..." />
+            <marker date="1540075814285" expanded="true" signature="3073:3077" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/venv/week03/week03.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="34">
+          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <marker date="1538872882906" expanded="true" signature="430:435" ph="..." />
@@ -584,82 +609,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/lib/function_base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-557">
-          <caret line="4064" column="4" selection-start-line="4064" selection-start-column="4" selection-end-line="4064" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week02/week02.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week04/house-votes-84.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week04/iris.data">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/test/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <marker date="1539461408459" expanded="true" signature="104:167" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/numpy/lib/arraysetops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="232" selection-start-line="232" selection-end-line="232" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week04/test.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/week04/week04.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="309">
+          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1539492575504" expanded="true" signature="161:1115" ph="..." />
-            <marker date="1539492575504" expanded="true" signature="1130:1411" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week04/DecisionTreeClassifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1539492730758" expanded="true" signature="99:103" ph="..." />
-            <marker date="1539492730758" expanded="true" signature="472:508" ph="..." />
-            <marker date="1539492730758" expanded="true" signature="532:583" ph="..." />
-            <marker date="1539492730758" expanded="true" signature="1316:1829" ph="..." />
-            <marker date="1539492730758" expanded="true" signature="2275:2308" ph="..." />
-            <marker date="1539492730758" expanded="true" signature="2361:3092" ph="..." />
+            <marker date="1540077924994" expanded="true" signature="237:1374" ph="..." />
+            <marker date="1540077924994" expanded="true" signature="1203:1374" ph="..." />
+            <marker date="1540077924994" expanded="true" signature="1390:2788" ph="..." />
           </folding>
         </state>
       </provider>

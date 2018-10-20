@@ -7,12 +7,9 @@ class DecisionTreeClassifier:
         self.data = data
         self.targets = targets
         self.column_names = column_names
-        self.tree_root = None
+        self.tree_root = Node([None, None])
 
-        self._build_tree(None, data, targets, column_names)
-
-        # build tree
-        # specify "None" for currentNode when starting algorithm
+        self._build_tree(self.tree_root, data, targets, column_names)
 
         return self
 
@@ -20,48 +17,79 @@ class DecisionTreeClassifier:
         return self.tree_root
 
     def predict(self, data):
-        # do something
-        return np.zeros(0)
+        prediction_set = []
+        for row in data:
+            prediction_set.append(self._make_prediction(row))
+
+        return prediction_set
+
+    def _make_prediction(self, row):
+        node = self.tree_root
+
+        while not node.is_leaf:
+            node_name = node.name[1]
+            row_value = self._get_row_value(row, node_name)
+            node = self._pick_next_node(node, row_value)
+
+        return node.name[1]
+
+    def _get_row_value(self, row, column_name):
+        index = self.column_names.index(column_name)
+        return row[index]
+
+    def _pick_next_node(self, node, row_value):
+        for child in node.children:
+            if child.name[0] == row_value:
+                return child
+
+        # Default case, if none are found, pick the first child
+        return node.children[0]
 
     def _build_tree(self, currentNode, data, targets, column_names):
-        if len(column_names) == 1:
-            self._handle_leaf_nodes(currentNode, data, targets)
-            return
 
+        # Find the next column to split
         column_to_split = self._pick_column_to_split(data, targets)
 
-        newNode = Node(column_names[column_to_split], parent=currentNode)
+        # Set the value in the tree of the column to split
+        currentNode.name[1] = column_names[column_to_split]
+
+        # Remove the column name from this set since it it's already been used
         column_names = np.delete(column_names, column_to_split)
-        if currentNode == None:
-            self.tree_root = newNode
 
-        for dataValue in np.unique(data[column_to_split]):
-            # Remove column and recurse
-            self._build_tree(newNode, np.delete(data, np.s_[column_to_split], 1), targets, column_names)
+        column_data = data[:,column_to_split]
 
+        # Create n number of branches depending on how many unique values there are in the chosen column
+        for dataValue in np.unique(column_data):
 
-    def _handle_leaf_nodes(self, currentNode, data, targets):
-        for dataValue in np.unique(data):
-            targetList = list(np.take(targets, np.where(data == dataValue)[0]))
-            bestValue = None
-            bestProbability = 0
+            # Include only rows with this dataValue in the target set and the data set
+            newTargets = targets[np.where(column_data == dataValue)]
+            newData = data[np.where(column_data == dataValue)]
 
-            for targetValue in np.unique(targets):
-                probability = targetList.count(targetValue) / len(targetList)
-                if probability > bestProbability:
-                    bestProbability = probability
-                    bestValue = targetValue
+            # Delete column from data set.
+            newData = np.delete(newData, np.s_[column_to_split], 1)
 
-            Node(bestValue, parent=currentNode)
+            # Create new Node that represents the edge. The next column name will be set on next iteration
+            newNode = Node([dataValue, None], parent=currentNode)
 
+            # If there are no more elements to split on, then pick the most common class
+            if (len(column_names) == 0) or (len(np.unique(newTargets)) == 1):
+                class_choice = self._pick_most_common_element(newTargets)
+                newNode.name[1] = class_choice
+            # Recurse and continue to build tree if we have more elements to split
+            else:
+                self._build_tree(newNode, newData, newTargets, column_names)
+
+    def _pick_most_common_element(self, array):
+        (values, counts) = np.unique(array, return_counts=True)
+        ind = np.argmax(counts)
+        return values[ind]
 
     def _pick_column_to_split(self, data, targets):
         best_column = 0
         best_column_entropy = 1000
 
         for index in range(0, data.shape[1]):
-            column_entropy = self._get_weighted_entropy(data[index], targets)
-            # print("Entropy for column ", index, ": ", column_entropy)
+            column_entropy = self._get_weighted_entropy(data[:,index], targets)
             if column_entropy < best_column_entropy:
                 best_column = index
                 best_column_entropy = column_entropy
@@ -81,8 +109,6 @@ class DecisionTreeClassifier:
                 probabilityList.append(probability)
 
             entropy = self.__get_entropy(probabilityList) * (dataListSize / len(dataColumn))
-
-            # print("Entropy for ", dataValue, " ", self.__get_entropy(probabilityList), " Weighted: ", entropy)
 
             weighted_entropy += entropy
 
