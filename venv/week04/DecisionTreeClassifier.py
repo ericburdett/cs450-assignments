@@ -72,6 +72,7 @@ class DecisionTreeClassifier:
             newNode = Node([dataValue, None], parent=currentNode)
 
             # If there are no more elements to split on, then pick the most common class
+            # Or if all remaining rows are of one class, then pick that class
             if (len(column_names) == 0) or (len(np.unique(newTargets)) == 1):
                 class_choice = self._pick_most_common_element(newTargets)
                 newNode.name[1] = class_choice
