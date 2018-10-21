@@ -2,6 +2,7 @@ import sys
 import numpy as np
 import pandas as pd
 from DecisionTreeClassifier import DecisionTreeClassifier
+from KNearestNeighbors import KNearestNeighbors
 from sklearn import model_selection
 from sklearn import tree
 from anytree import Node, RenderTree
@@ -44,6 +45,35 @@ def main(args):
     # Get prediction numbers
     sk_correct, sk_total = get_prediction_numbers(predictions, target_test)
 
+
+    # My KNearestNeighbors Classifier - Requires one-hot transformation
+
+    # Requires transforming categorical data into numerical data
+    # could do this in pandas, but this is easier for now
+    temp = []
+    for entry in target_test:
+        if entry == 'Republican':
+            temp.append(0)
+        else:
+            temp.append(1)
+    target_test = np.array(temp)
+
+    temp = []
+    for entry in target_train:
+        if entry == 'Republican':
+            temp.append(0)
+        else:
+            temp.append(1)
+    target_train = np.array(temp)
+
+    classifier = KNearestNeighbors(k=3)
+    classifier.fit(data_train, target_train)
+    predictions = classifier.predict(data_test)
+
+    # Get prediction numbers
+    k_correct, k_total = get_prediction_numbers(predictions, target_test)
+
+
     # My Classifier - Without one-hot transformation
     data, targets, column_names = get_data(False)
     data_train, data_test, target_train, target_test = model_selection.train_test_split(data, targets, test_size=.30, random_state=42)
@@ -55,6 +85,8 @@ def main(args):
     # Get prediction numbers
     correct, total = get_prediction_numbers(predictions, target_test)
 
+
+
     # Display the tree
     root = classifier.get_root_node()
     for pre, fill, node in RenderTree(root):
@@ -63,8 +95,12 @@ def main(args):
     print("\nMy Classifier:")
     print("Total ({} / {}) accuracy: {:.2f}".format(correct, total ,correct / total))
 
-    print("\nSklearn's Classifier")
+    print("\nSklearn's Classifier:")
     print("Total ({} / {}) accuracy: {:.2f}".format(sk_correct, sk_total ,sk_correct / sk_total))
+
+    print("\nMy KNearestNeighbors Classifier:")
+    print("Total ({} / {}) accuracy: {:.2f}".format(k_correct, k_total ,k_correct / k_total))
+
 
 if __name__ == "__main__":
     main(sys.argv)

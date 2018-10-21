@@ -20,6 +20,8 @@ def main(argv):
     data = StandardScaler().fit_transform(iris.data) # Standardize, so that we can work with different types of data
     target = iris.target
 
+    print("Targets: ", target)
+
     data_train, data_test, target_train, target_test = model_selection.train_test_split(data, target, test_size=.30, random_state=42)
 
     for i in range(1,100):
