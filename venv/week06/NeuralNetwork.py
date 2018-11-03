@@ -21,16 +21,20 @@ class NeuralNetworkClassifier:
     def predict(self, data):
         output_neuron_results = []
 
-        for row in data:
-            output_neuron_results.append(self.get_output_neuron_results(row))
+        uniqueTargets = np.unique(self.targets)
 
-        return np.array(output_neuron_results)
+        predictions = []
+
+        for row in data:
+            activation_value = self.feed_forward(row)
+            prediction = uniqueTargets[0] if activation_value < .5 else uniqueTargets[1]
+            predictions.append(prediction)
+
+        return np.array(predictions)
 
     def train(self):
         for row in self.data:
             output = self.feed_forward(row)
-
-            print("Final Output: ", output)
 
             # calculate error
             # back-propagate and update neural network
