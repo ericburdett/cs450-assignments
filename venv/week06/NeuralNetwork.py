@@ -1,13 +1,22 @@
 import numpy as np
+import math
 
 class NeuralNetworkClassifier:
-    def fit(self, data, targets, bias, layers):
+    def __init__(self, hiddenLayerCounts):
+        # Use the hidden layer counts given, and add a single node for the final output layer
+        hiddenLayerCounts.append(1)
+        self.layerCounts = hiddenLayerCounts
+
+    def fit(self, data, targets):
         self.data = data
         self.targets = targets
-        self.bias = bias
-        self.layers = layers
 
+        # Create all nodes needed for the network, given the counts
         self.create_neurons()
+
+        # Train the network based on the data given
+        self.train()
+
 
     def predict(self, data):
         output_neuron_results = []
@@ -17,36 +26,67 @@ class NeuralNetworkClassifier:
 
         return np.array(output_neuron_results)
 
-    def get_output_neuron_results(self, row):
-        output = []
-        layerNum = 0
+    def train(self):
+        for row in self.data:
+            output = self.feed_forward(row)
 
-        for neuron in self.neurons:
-            # Prepend the bias node to the given row
-            neuron.values = np.insert(row,0, self.bias[0])
-            output.append(neuron.does_fire())
+            print("Final Output: ", output)
 
-        return np.array(output)
+            # calculate error
+            # back-propagate and update neural network
+
+    def feed_forward(self, row):
+        # Insert input values into first layer
+        for neuron in self.neuronList[0]:
+            neuron.values = np.insert(row, 0, -1)
+
+        for i in range(0, len(self.neuronList) - 1):
+            activation_values = []
+
+            # Calculate activation values
+            for j in range(0, len(self.neuronList[i])):
+                # calculate activation
+                activation_values.append(self.neuronList[i][j].activation())
+
+            # Add bias node to front
+            activation_values.insert(0, -1)
+
+            # Insert activation values into the next layer
+            for j in range(0, len(self.neuronList[i+1])):
+                self.neuronList[i+1][j].values = np.array(activation_values)
+
+        # return the activation for the final output node
+        return self.neuronList[-1][0].activation()
 
     def create_neurons(self):
-        # this is also the number of columns in the data, +1 to account for bias
-        number_of_edges_per_neuron = self.data.shape[1] + 1
+        neuronList = []
+        # Iterate through each layer
+        for i in range(0, len(self.layerCounts)):
+            incoming_connections = 0
+            # if first layer, incoming connections is equal to number of inputs
+            if i == 0:
+                # add one for the bias node
+                incoming_connections = self.data.shape[1] + 1
+            # incoming connections is equal to the # of nodes on the previous layer
+            else:
+                # add one for the bias node
+                incoming_connections = self.layerCounts[i - 1] + 1
 
-        self.output_names = []
-        self.neurons = []
+            neurons = []
 
-        # Create the output nodes, 1 for each output
-        for target_name in np.unique(self.targets):
-            # Store the names in the output list
-            self.output_names.append(target_name)
+            # Iterate through each node in the layer
+            for j in range(0, self.layerCounts[i]):
+                # Add neuron to the list for this layer
+                neurons.append(Neuron(incoming_connections))
 
-            # Create a neuron, initialize weights and values to 0,
-            # and add it to the neuron list
-            self.neurons.append(Neuron(number_of_edges_per_neuron))
+            # Add list of neurons for this layer to list for entire network
+            if len(neurons) != 0:
+                neuronList.append(neurons)
 
-    def train(self):
-        # do something
-        return
+        # print("NeuronList")
+
+        # convert to numpy array
+        self.neuronList = np.array(neuronList)
 
 class Neuron:
     def __init__(self, number_of_connections):
@@ -55,10 +95,17 @@ class Neuron:
         self.values = np.zeros(number_of_connections)
         self.weights = np.random.uniform(-1, 1, number_of_connections)
 
-    def does_fire(self):
+    def activation(self):
         # multiple weights by the values, then sum
-        # if the sum exceeds the threshold of 0, then the neuron fires
-        return np.sum(self.values * self.weights) > 0
+        sum = np.sum(self.values * self.weights)
+
+        # use the sigmoid activation function
+        return 1 / (1 + math.exp(-sum))
 
     def __repr__(self):
         return "(weights: {} values: {})".format(np.array2string(self.weights), np.array2string(self.values))
+
+
+
+
+
