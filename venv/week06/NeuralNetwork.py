@@ -2,10 +2,11 @@ import numpy as np
 import math
 
 class NeuralNetworkClassifier:
-    def __init__(self, hiddenLayerCounts):
+    def __init__(self, hiddenLayerCounts, learningRate):
         # Use the hidden layer counts given, and add a single node for the final output layer
         hiddenLayerCounts.append(1)
         self.layerCounts = hiddenLayerCounts
+        self.learningRate = learningRate
 
     def fit(self, data, targets):
         self.data = data
@@ -17,29 +18,111 @@ class NeuralNetworkClassifier:
         # Train the network based on the data given
         self.train()
 
-
     def predict(self, data):
         output_neuron_results = []
 
-        uniqueTargets = np.unique(self.targets)
+        # uniqueTargets = np.unique(self.targets)
 
         predictions = []
 
         for row in data:
             activation_value = self.feed_forward(row)
-            prediction = uniqueTargets[0] if activation_value < .5 else uniqueTargets[1]
+            # prediction = uniqueTargets[0] if activation_value < .5 else uniqueTargets[1]
+            prediction = 0 if activation_value < .5 else 1
             predictions.append(prediction)
 
         return np.array(predictions)
 
-    def train(self):
-        for row in self.data:
-            output = self.feed_forward(row)
+    def predict_from_activation(self, value):
+        prediction = 0 if value < .5 else 1
+        return np.array(prediction)
 
-            # calculate error
-            # back-propagate and update neural network
+    def train(self):
+        self.error_x = []
+        self.error_y = []
+        for i in range(0, len(self.data)):
+            if i % 1000 == 0:
+                print("Training Progress: ", i / len(self.data))
+
+            output = self.feed_forward(self.data[i])
+
+            # Add to our error lists so that we can visualize the learning progress later
+            self.error_x.append(i)
+            self.error_y.append(self.predict_from_activation(output))
+
+            self.back_propagate(output, self.targets[i])
+
+        # Update lists
+        correct = self.error_y == self.targets
+        self.error_y = []
+        self.error_x = []
+
+        for i in range(0, len(correct), 100):
+            endValue = i + 100 if i + 100 < len(correct) else len(correct)
+            sublist = correct[i:endValue]
+            accuracy = np.count_nonzero(sublist) / len(sublist)
+            self.error_x.append(i / 100)
+            self.error_y.append(accuracy)
+
+    def back_propagate(self, output, target):
+        self.error_list = []
+        output_layer_error_list = []
+
+        # Output Layer Error
+        error = output * (1 - output) * (output - target)
+
+        output_layer_error_list.append(error)
+
+        self.error_list.append(output_layer_error_list)
+
+        # Hidden Layer Error
+
+        # Each Layer
+        for i in range(len(self.neuronList) - 2, -1, -1):
+            layer_error_list = []
+
+            # Each Node within a layer
+            for j in range(0, len(self.neuronList[i])):
+                neuron = self.neuronList[i][j]
+                activation_value = neuron.activation()
+
+                sum = 0
+                # calculate sum...
+                for k in range(0, len(self.neuronList[i + 1])):
+                    upper_layer_error = self.error_list[len(self.neuronList) - i - 2][k]
+                    neuron = self.neuronList[i + 1][k]
+                    weight = neuron.weights[i]
+
+                    sum += weight * upper_layer_error
+
+                neuron_error = activation_value * (1 - activation_value) * sum
+
+                # Add the neuron's error to the layer error list
+                layer_error_list.append(neuron_error)
+
+            # Add the layer's error to the master error list
+            self.error_list.append(layer_error_list)
+
+        # Update the weights based on the calculated errors
+
+        # Each layer
+        for i in range(len(self.neuronList) - 1, -1, -1):
+
+            # Each neuron in a layer
+            for j in range(0, len(self.neuronList[i])):
+                neuron = self.neuronList[i][j]
+
+                error = self.error_list[len(self.neuronList) - i - 1][j]
+
+                # Each weight in a neuron
+                for k in range(0, len(neuron.weights)):
+                    neuron.weights[k] -= self.learningRate * error * self.valueList[i][k]
 
     def feed_forward(self, row):
+        self.valueList = []
+
+        self.valueList.append(np.insert(row, 0, -1).tolist())
+
         # Insert input values into first layer
         for neuron in self.neuronList[0]:
             neuron.values = np.insert(row, 0, -1)
@@ -54,6 +137,8 @@ class NeuralNetworkClassifier:
 
             # Add bias node to front
             activation_values.insert(0, -1)
+
+            self.valueList.append(activation_values)
 
             # Insert activation values into the next layer
             for j in range(0, len(self.neuronList[i+1])):
@@ -87,10 +172,13 @@ class NeuralNetworkClassifier:
             if len(neurons) != 0:
                 neuronList.append(neurons)
 
-        # print("NeuronList")
-
         # convert to numpy array
         self.neuronList = np.array(neuronList)
+
+    def get_error_lists(self):
+
+
+        return np.array(self.error_x), np.array(self.error_y)
 
 class Neuron:
     def __init__(self, number_of_connections):
