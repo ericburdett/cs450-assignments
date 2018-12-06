@@ -2,11 +2,13 @@ import numpy as np
 import math
 
 class NeuralNetworkClassifier:
-    def __init__(self, hiddenLayerCounts, learningRate):
+    def __init__(self, hiddenLayerCounts, learningRate, momentumHindsight, momentumWeight):
         # Use the hidden layer counts given, and add a single node for the final output layer
         hiddenLayerCounts.append(1)
         self.layerCounts = hiddenLayerCounts
         self.learningRate = learningRate
+        self.momentumHindsight = momentumHindsight
+        self.momentumWeight = momentumWeight
 
     def fit(self, data, targets):
         self.data = data
@@ -57,11 +59,12 @@ class NeuralNetworkClassifier:
         self.error_y = []
         self.error_x = []
 
-        for i in range(0, len(correct), 100):
-            endValue = i + 100 if i + 100 < len(correct) else len(correct)
+        accuracySet = 10
+        for i in range(0, len(correct), accuracySet):
+            endValue = i + accuracySet if i + accuracySet < len(correct) else len(correct)
             sublist = correct[i:endValue]
             accuracy = np.count_nonzero(sublist) / len(sublist)
-            self.error_x.append(i / 100)
+            self.error_x.append(i / accuracySet)
             self.error_y.append(accuracy)
 
     def back_propagate(self, output, target):
@@ -116,7 +119,11 @@ class NeuralNetworkClassifier:
 
                 # Each weight in a neuron
                 for k in range(0, len(neuron.weights)):
-                    neuron.weights[k] -= self.learningRate * error * self.valueList[i][k]
+                    weight_change = self.learningRate * error * self.valueList[i][k]
+                    # Add momentum and update weight
+                    neuron.weights[k] -= (self.momentumWeight * np.sum(neuron.previous_weights[k])) + ((1 - self.momentumWeight) * weight_change )
+                    # Add to the list so we can use it next iteration
+                    neuron.add_to_previous_weight_list(k, weight_change)
 
     def feed_forward(self, row):
         self.valueList = []
@@ -166,7 +173,7 @@ class NeuralNetworkClassifier:
             # Iterate through each node in the layer
             for j in range(0, self.layerCounts[i]):
                 # Add neuron to the list for this layer
-                neurons.append(Neuron(incoming_connections))
+                neurons.append(Neuron(incoming_connections, self.momentumHindsight))
 
             # Add list of neurons for this layer to list for entire network
             if len(neurons) != 0:
@@ -176,16 +183,17 @@ class NeuralNetworkClassifier:
         self.neuronList = np.array(neuronList)
 
     def get_error_lists(self):
-
-
         return np.array(self.error_x), np.array(self.error_y)
 
 class Neuron:
-    def __init__(self, number_of_connections):
+    def __init__(self, number_of_connections, momentumHindsight):
         # For now, we'll just initialize the weights to random values
         # This is more interesting that looking at zeros for the outputs
         self.values = np.zeros(number_of_connections)
         self.weights = np.random.uniform(-1, 1, number_of_connections)
+        self.previous_weights = np.zeros((number_of_connections, momentumHindsight))
+        self.momentum_hindsight = momentumHindsight
+        self.iteration = 0
 
     def activation(self):
         # multiple weights by the values, then sum
@@ -194,10 +202,13 @@ class Neuron:
         # use the sigmoid activation function
         return 1 / (1 + math.exp(-sum))
 
+    def add_to_previous_weight_list(self, weight_index, value):
+        # return
+        previous_weight_index = self.iteration % self.momentum_hindsight
+        self.iteration += 1
+        self.previous_weights[weight_index][previous_weight_index] = value
+
     def __repr__(self):
         return "(weights: {} values: {})".format(np.array2string(self.weights), np.array2string(self.values))
-
-
-
 
 

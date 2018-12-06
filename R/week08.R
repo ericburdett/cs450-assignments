@@ -65,3 +65,14 @@ accuracy <- prop.table(table(correct))
 print("Vowels Dataset")
 #print(confusionMatrix)
 print(accuracy)
+
+
+# See how our results compared with the tune function:
+irisTuned <- tune.svm(Species~., data = irisTrain, gamma = 10^(-3:0), cost = 2^(1:7))
+summary(irisTuned)
+
+lettersTuned <- tune.svm(letter~., data = lettersTrain, gamma=10^(-3:0), cost = 2^(1:7))
+summary(lettersTuned)
+
+vowelsTuned <- tune.svm(Class~., data = vowelsTrain, gamma=10^(-3:0), cost = 2^(1:7))
+summary(vowelsTuned)

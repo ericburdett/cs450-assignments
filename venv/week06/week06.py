@@ -94,37 +94,37 @@ def show_accuracy(prediction, target, classifier):
     print(type(classifier).__name__, ": Accuracy: ", correct, "/", total, " - ", "{:.2f}".format(correct * 100 / total), "%")
 
 def main(args):
-    data, targets = get_data()
+    data, targets = get_autism_data()
 
     data_train, data_test, target_train, target_test = model_selection.train_test_split(data, targets, test_size=.3, random_state=12)
 
     # My Neural Network
-    network = NeuralNetworkClassifier([5,5], .05)
+    network = NeuralNetworkClassifier([5,5], .05, 5, .4)
     network.fit(data_train, target_train)
     show_accuracy(network.predict(data_test), target_test, network)
 
-    # Sklearn's Neural Network
+    # # Sklearn's Neural Network
     libNetwork = MLPClassifier(hidden_layer_sizes=(5,5), learning_rate='adaptive', learning_rate_init=.1)
     libNetwork.fit(data_train, target_train)
     show_accuracy(libNetwork.predict(data_test), target_test, libNetwork)
 
-    # K Nearest Neighbors
+    # # K Nearest Neighbors
     kNeighbors = KNeighborsClassifier(n_neighbors=3)
     kNeighbors.fit(data_train, target_train)
     show_accuracy(kNeighbors.predict(data_test), target_test, kNeighbors)
 
-    # Nieve Bayes
+    # # Nieve Bayes
     bayes = GaussianNB()
     bayes.fit(data_train, target_train)
     show_accuracy(bayes.predict(data_test), target_test, bayes)
 
-    # Decision Tree
+    # # Decision Tree
     tree = DecisionTreeClassifier()
     tree.fit(data_train, target_train)
     show_accuracy(tree.predict(data_test), target_test, tree)
 
-    print("show learning graph? (y/n)")
-    showGraph = input()
+    # print("show learning graph? (y/n)")
+    showGraph = 'y'
 
     if (showGraph == 'y'):
         x,y = network.get_error_lists()

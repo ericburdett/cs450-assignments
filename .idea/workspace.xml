@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd8ec37b-e860-4a8d-a7f5-c7bf7ad2cdd2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/venv/week06/Autism-Adult-Data.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/week11/Autism-Adult-Data.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/week11/adult.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/week11/house-votes-84.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/week11/spambase.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/week11/week11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/week11/wine.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/R/week08.R" beforeDir="false" afterPath="$PROJECT_DIR$/R/week08.R" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/week06/NeuralNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/week06/NeuralNetwork.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/week06/week06.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/week06/week06.py" afterDir="false" />
     </list>
@@ -17,110 +23,145 @@
     <session id="-1277855314">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.closed" value="19" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.5" value="6" />
-          <entry key="project.open.time.6" value="6" />
+          <entry key="project.open.time.6" value="7" />
           <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="arff" value="1" />
           <entry key="csv" value="9" />
-          <entry key="data" value="18" />
+          <entry key="data" value="26" />
           <entry key="names" value="3" />
-          <entry key="py" value="58" />
+          <entry key="py" value="63" />
           <entry key="test" value="1" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="39" />
-          <entry key="Python" value="58" />
+          <entry key="PLAIN_TEXT" value="47" />
+          <entry key="Python" value="63" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="arff" value="37" />
           <entry key="csv" value="1371" />
-          <entry key="data" value="898" />
+          <entry key="data" value="934" />
           <entry key="dummy" value="10" />
-          <entry key="py" value="78012" />
+          <entry key="py" value="91034" />
           <entry key="test" value="6" />
           <entry key="txt" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="2340" />
-          <entry key="Python" value="78012" />
+          <entry key="PLAIN_TEXT" value="2376" />
+          <entry key="Python" value="91034" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/week06/week06.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="112" column="17" lean-forward="true" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
+            <state relative-caret-position="151">
+              <caret line="106" selection-start-line="106" selection-end-line="106" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <marker date="1541834127903" expanded="true" signature="3216:3505" ph="..." />
-                <marker date="1541834127903" expanded="true" signature="3268:3505" ph="..." />
-                <marker date="1541834127903" expanded="true" signature="4927:4928" ph="..." />
+                <marker date="1541896326047" expanded="true" signature="3216:3505" ph="..." />
+                <marker date="1541896326047" expanded="true" signature="3268:3505" ph="..." />
+                <marker date="1541896326047" expanded="true" signature="4949:4950" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/week06/NeuralNetwork.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/venv/week11/week11.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="204">
+              <caret line="148" column="52" selection-start-line="148" selection-start-column="52" selection-end-line="148" selection-end-column="52" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1541821624248" expanded="true" signature="119:128" ph="..." />
-                <marker date="1541821624248" expanded="true" signature="1099:1185" ph="..." />
-                <marker date="1541821624248" expanded="true" signature="2180:2181" ph="..." />
-                <marker date="1541821624248" expanded="true" signature="2180:2189" ph="..." />
-                <marker date="1541821624248" expanded="true" signature="2180:2256" ph="..." />
-                <marker date="1541821624248" expanded="true" signature="2180:4012" ph="..." />
-                <marker date="1541821624248" expanded="true" signature="4012:4016" ph="..." />
+                <element signature="e#0#10#0" expanded="true" />
+                <marker date="1544076879005" expanded="true" signature="575:1278" ph="..." />
+                <marker date="1544076879005" expanded="true" signature="1298:1625" ph="..." />
+                <marker date="1544076879005" expanded="true" signature="4283:5813" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/week06/adult.data">
+        <entry file="file://$PROJECT_DIR$/venv/week11/wine.data">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-829906">
-              <caret line="1" column="132" selection-start-line="1" selection-start-column="132" selection-end-line="1" selection-end-column="132" />
+            <state>
+              <caret column="1" selection-start-column="1" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/venv/week06/Autism-Adult-Data.data">
+        <entry file="file://$PROJECT_DIR$/venv/week11/spambase.data">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11533" />
+            <state relative-caret-position="425">
+              <caret line="4600" selection-start-line="4600" selection-end-line="4600" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/week04/house-votes-84.data">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/week11/house-votes-84.data">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="434" selection-start-line="434" selection-end-line="434" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/week04/week04.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/ensemble/bagging.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="550" column="17" selection-start-line="550" selection-start-column="17" selection-end-line="550" selection-end-column="17" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/week03/week03.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="-102">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
               <folding>
+                <element signature="e#0#10#0" expanded="true" />
                 <marker date="1538872882906" expanded="true" signature="430:435" ph="..." />
                 <marker date="1538872882906" expanded="true" signature="542:591" ph="..." />
                 <marker date="1538872882906" expanded="true" signature="1701:3875" ph="..." />
@@ -163,6 +204,7 @@
         <option value="$PROJECT_DIR$/venv/week06/test.csv" />
         <option value="$PROJECT_DIR$/venv/week06/NeuralNetwork.py" />
         <option value="$PROJECT_DIR$/venv/week06/week06.py" />
+        <option value="$PROJECT_DIR$/venv/week11/week11.py" />
       </list>
     </option>
   </component>
@@ -219,6 +261,12 @@
               <item name="cs450-assignments" type="462c0819:PsiDirectoryNode" />
               <item name="venv" type="462c0819:PsiDirectoryNode" />
               <item name="week06" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cs450-assignments" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cs450-assignments" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+              <item name="week11" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cs450-assignments" type="b2602c69:ProjectViewProjectNode" />
@@ -280,13 +328,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\School\CS450 - Machine Learning\cs450-assignments\venv\test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\School\CS450 - Machine Learning\cs450-assignments\venv\week11" />
       <recent name="C:\School\CS450 - Machine Learning\cs450-assignments\venv\week06" />
       <recent name="C:\School\CS450 - Machine Learning\cs450-assignments\venv\week04" />
       <recent name="C:\School\CS450 - Machine Learning\cs450-assignments\venv\week03" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\School\CS450 - Machine Learning\cs450-assignments\venv\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -301,7 +350,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.week06">
+  <component name="RunManager" selected="Python.week11">
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="cs450-assignments" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -336,27 +385,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/week02/week02.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="week03" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="cs450-assignments" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/week03" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/week03/week03.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -407,20 +435,41 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="week11" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="cs450-assignments" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/venv/week11" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/venv/week11/week11.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.week02" />
       <item itemvalue="Python.test" />
-      <item itemvalue="Python.week03" />
       <item itemvalue="Python.week04" />
       <item itemvalue="Python.week06" />
+      <item itemvalue="Python.week11" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.week11" />
         <item itemvalue="Python.week06" />
         <item itemvalue="Python.week04" />
         <item itemvalue="Python.week02" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.week03" />
       </list>
     </recent_temporary>
   </component>
@@ -439,15 +488,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23320659" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32884097" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2425876" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3652291" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -624,13 +672,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/venv/week06/iris.data" />
-    <entry file="file://$PROJECT_DIR$/venv/week04/house-votes-84.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/week03/Autism-Adult-Data.data">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11798">
@@ -648,65 +689,10 @@
     <entry file="file://$PROJECT_DIR$/venv/week06/adult.names">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week06/adult.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-829906">
-          <caret line="1" column="132" selection-start-line="1" selection-start-column="132" selection-end-line="1" selection-end-column="132" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week06/Autism-Adult-Data.data">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11533" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week06/NeuralNetwork.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1541821624248" expanded="true" signature="119:128" ph="..." />
-            <marker date="1541821624248" expanded="true" signature="1099:1185" ph="..." />
-            <marker date="1541821624248" expanded="true" signature="2180:2181" ph="..." />
-            <marker date="1541821624248" expanded="true" signature="2180:2189" ph="..." />
-            <marker date="1541821624248" expanded="true" signature="2180:2256" ph="..." />
-            <marker date="1541821624248" expanded="true" signature="2180:4012" ph="..." />
-            <marker date="1541821624248" expanded="true" signature="4012:4016" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/week02/week02.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week04/week04.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week03/week03.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <marker date="1538872882906" expanded="true" signature="430:435" ph="..." />
-            <marker date="1538872882906" expanded="true" signature="542:591" ph="..." />
-            <marker date="1538872882906" expanded="true" signature="1701:3875" ph="..." />
-            <marker date="1538872882906" expanded="true" signature="3937:4335" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -715,15 +701,126 @@
         <state relative-caret-position="-370" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/week06/week06.py">
+    <entry file="file://$PROJECT_DIR$/venv/week06/Autism-Adult-Data.data">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week06/adult.data">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="112" column="17" lean-forward="true" selection-start-line="112" selection-start-column="17" selection-end-line="112" selection-end-column="17" />
+        <state relative-caret-position="17">
+          <caret line="21" column="90" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week06/NeuralNetwork.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1541896123592" expanded="true" signature="154:163" ph="..." />
+            <marker date="1541896123592" expanded="true" signature="1230:1316" ph="..." />
+            <marker date="1541896123592" expanded="true" signature="2368:2369" ph="..." />
+            <marker date="1541896123592" expanded="true" signature="2368:2377" ph="..." />
+            <marker date="1541896123592" expanded="true" signature="2368:2444" ph="..." />
+            <marker date="1541896123592" expanded="true" signature="2368:4538" ph="..." />
+            <marker date="1541896123592" expanded="true" signature="4538:4542" ph="..." />
+            <marker date="1541896123592" expanded="true" signature="7558:7740" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/sklearn/ensemble/bagging.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="550" column="17" selection-start-line="550" selection-start-column="17" selection-end-line="550" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week03/week03.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <marker date="1541834127903" expanded="true" signature="3216:3505" ph="..." />
-            <marker date="1541834127903" expanded="true" signature="3268:3505" ph="..." />
-            <marker date="1541834127903" expanded="true" signature="4927:4928" ph="..." />
+            <marker date="1538872882906" expanded="true" signature="430:435" ph="..." />
+            <marker date="1538872882906" expanded="true" signature="542:591" ph="..." />
+            <marker date="1538872882906" expanded="true" signature="1701:3875" ph="..." />
+            <marker date="1538872882906" expanded="true" signature="3937:4335" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week06/week06.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1541896326047" expanded="true" signature="3216:3505" ph="..." />
+            <marker date="1541896326047" expanded="true" signature="3268:3505" ph="..." />
+            <marker date="1541896326047" expanded="true" signature="4949:4950" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week04/house-votes-84.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week04/week04.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week11/adult.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="48842" selection-start-line="48842" selection-end-line="48842" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week11/Autism-Adult-Data.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="703" selection-start-line="703" selection-end-line="703" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week11/house-votes-84.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="434" selection-start-line="434" selection-end-line="434" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week11/spambase.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="4600" selection-start-line="4600" selection-end-line="4600" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week11/wine.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/week11/week11.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="148" column="52" selection-start-line="148" selection-start-column="52" selection-end-line="148" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <marker date="1544076879005" expanded="true" signature="575:1278" ph="..." />
+            <marker date="1544076879005" expanded="true" signature="1298:1625" ph="..." />
+            <marker date="1544076879005" expanded="true" signature="4283:5813" ph="..." />
           </folding>
         </state>
       </provider>
